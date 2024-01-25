@@ -242,7 +242,7 @@ NAVBAR END*/
   background-color: rgb(25, 25, 25);
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("abtimg.jpg");
+  background-image: url("img/abtimg.jpg");
   background-position-y: 50%;
   background-position-x: 90%;
   background-size: cover;
@@ -316,7 +316,7 @@ ABOUT SECTION END*/
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background-image: url("../img/hobby2.jpg");
+  background-image: url("img/hobby2.jpg");
   background-color: rgba(255, 255, 255, 0.452);
 
   background-repeat: no-repeat;
@@ -474,7 +474,7 @@ HOBBIES SECTION END*/
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background-image: url("../img/softskill1.jpg");
+  background-image: url("img/softskill1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 100%;
@@ -562,7 +562,7 @@ SKILL SECTION END*/
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background-image: url("../img/project1.jpg");
+  background-image: url("img/project1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 100%;
@@ -662,7 +662,7 @@ PROJECT SEC END*/
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background-image: url("../img/habits1.jpg");
+  background-image: url("img/habits1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 100%;
