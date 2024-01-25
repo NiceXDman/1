@@ -1,5 +1,5 @@
 const navcs = document.querySelectorAll(".navcontent");
-const navinput = document.querySelector(".hamburgermenu input");
+const navinput = document.querySelectorAll(".hamburgermenu input");
 const initSlider = () => {
   const slidebutton = document.querySelectorAll(".hobbiesbox .slidebutton");
   const slidebutton1 = document.querySelectorAll(
