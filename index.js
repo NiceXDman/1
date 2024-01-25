@@ -1,5 +1,8 @@
 const contentnav = document.querySelectorAll(".navcontent");
 const navinput = document.querySelectorAll(".hamburgermenu input");
+navinput.addEventListener("click", () => {
+  contentnav.classList.toggle("active");
+});
 const initSlider = () => {
   const slidebutton = document.querySelectorAll(".hobbiesbox .slidebutton");
   const slidebutton1 = document.querySelectorAll(
@@ -21,9 +24,7 @@ const initSlider = () => {
 };
 window.addEventListener("load", initSlider);
 //ham
-navinput.addEventListener("click", () => {
-  contentnav.classList.toggle("active");
-});
+
 
 // SCROLLANIM
 //
