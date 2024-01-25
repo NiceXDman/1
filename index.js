@@ -20,7 +20,7 @@ const initSlider = () => {
   //test
 };
 window.addEventListener("load", initSlider);
-navinput.addEventListener("click", function () {
+navinput.addEventListener("click", () => {
   navcs.classList.toggle("active");
 });
 
