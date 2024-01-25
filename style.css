@@ -1,0 +1,970 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-y: visible;
+  text-decoration: none;
+  font-family: "Poppins";
+  transition: all 0.2s;
+}
+:root {
+  --primary: rgb(98, 216, 190);
+  --bg: rgb(25, 25, 25);
+  --bg2: rgb(70, 70, 70);
+  --bg3: rgb(14, 14, 14);
+}
+body {
+  min-height: 9000px;
+  background-color: rgb(25, 25, 25);
+
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* KEYFRAME
+
+
+*/
+@keyframes navbar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes navitem {
+  from {
+    transform: translateY(-300%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes navlogo {
+  from {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes h1 {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes p {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* 
+
+
+KEYFRAME END*/
+/* PAGEBREAK SEC */
+.pagebreak1 {
+  min-height: 70vh;
+  background-color: var(--bg3);
+}
+.pagebreak2 {
+  min-height: 70vh;
+  position: relative;
+  background-color: var(--bg3);
+}
+.pagebreak2::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, var(--bg3) 8%, rgba(255, 255, 255, 0) 45%);
+  width: 100%;
+  height: 50%;
+  bottom: 100%;
+}
+.pagebreak3 {
+  min-height: 70vh;
+  position: relative;
+  background-color: var(--bg3);
+}
+.pagebreak3::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, var(--bg3) 8%, rgba(255, 255, 255, 0) 45%);
+  width: 100%;
+  height: 50%;
+  bottom: 100%;
+}
+/* NAVBAR 
+
+
+*/
+.nav {
+  display: flex;
+  position: fixed;
+  animation: running navbar;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: 9999999;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  top: 0;
+  height: 10vh;
+  background-color: var(--bg);
+  border-bottom: 3px solid var(--primary);
+  transform: scaleZ(9999);
+}
+.logo {
+  font-size: 4rem;
+  font-family: "Poppins";
+  transform: translateX(-200%);
+  font-style: italic;
+  color: var(--primary);
+
+  animation: running navlogo;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.logo span {
+  color: transparent;
+  -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 1px;
+}
+.navcontent {
+  display: flex;
+  justify-content: space-between;
+}
+.navcontent a {
+  transform: translateY(-300%);
+  color: var(--primary);
+  font-size: 2rem;
+  margin: 0px 20px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  z-index: 999;
+}
+.about {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.hobby {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.skill {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.project {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 1.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.habit {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 1.9s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.contact {
+  animation: running navitem;
+  animation-iteration-count: 1;
+  animation-duration: 2.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.navcontent a:hover {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  transform: scale(1.05);
+}
+.navcontent a:active {
+  transform: scale(1);
+}
+/* HAMBURGER MENU
+
+
+*/
+
+.hamburgermenu {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+.hamburgermenu span {
+  background-color: green;
+  width: auto;
+  height: auto;
+}
+/* 
+
+
+
+NAVBAR END*/
+
+/* ABOUT SECTION
+
+
+*/
+.aboutsec {
+  height: 120vh;
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/abtimg.jpg");
+  background-position-y: 50%;
+  background-position-x: 90%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.h-1 {
+  animation: running h1;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  transition: 1s;
+  transform: translateX(50%);
+  opacity: 0;
+  font-size: 4.5rem;
+  margin-left: 10%;
+  width: 40%;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border-bottom: 3px solid var(--primary);
+  color: white;
+  margin-top: 15%;
+}
+.aboutsec main h1 span {
+  color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+}
+.aboutsec main p {
+  animation: running p;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-delay: 1.4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  font-size: 2rem;
+  opacity: 0;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+  background-color: transparent;
+  width: 40%;
+  margin-top: 5%;
+  padding: 0px 10%;
+  color: white;
+}
+.aboutsec::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, var(--bg3) 8%, rgba(255, 255, 255, 0) 45%);
+  width: 100%;
+  height: 30%;
+  display: block;
+  bottom: 0;
+}
+/* 
+
+
+ABOUT SECTION END*/
+
+/* HOBBIES SECTION
+
+
+*/
+.hobbiessec {
+  min-height: 120vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/hobby2.jpg");
+  background-color: rgba(255, 255, 255, 0.452);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 0%;
+  background-position-x: 0%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.hobbiessec::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    var(--bg3) 8%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  width: 100%;
+  height: 30%;
+  display: block;
+  top: 0;
+}
+.hobbiessec h1 {
+  font-size: 5.5rem;
+  color: white;
+  animation: fade linear;
+}
+.hobbiessec h1 span {
+  color: transparent;
+  -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 3px;
+}
+.hobbiesbox {
+  background-color: rgba(63, 63, 63, 0.438);
+  border-bottom: 3px solid var(--primary);
+  border-top: 3px solid var(--primary);
+  border-radius: 10px;
+  width: 70%;
+  height: 500px;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.imglist {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  scrollbar-width: none;
+  overflow-x: auto;
+}
+.imglist::-webkit-scrollbar {
+  display: none;
+}
+.imglist img {
+  margin: 0px 30px;
+}
+.slidebar {
+  height: 24px;
+  width: 80%;
+  top: 0;
+  background-color: transparent;
+  display: flex;
+  margin-top: 1%;
+}
+.scrollbartrack {
+  height: 3px;
+  width: 100%;
+  transition: 0.2s;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+.slidebar:hover .scrollbartrack {
+  height: 5px;
+}
+.slidebar .scrollbarthumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.scrollbarthumb {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 4px;
+  cursor: grab;
+}
+.scrollbarthumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+.slidebutton {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 100px;
+  background-color: black;
+  color: var(--primary);
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.slidebutton:hover {
+  background-color: rgb(44, 44, 44);
+  transform: scale(1.1);
+}
+.slidebutton:active {
+  transform: scale(1);
+}
+#prevslide {
+  left: 0;
+  margin-left: 13%;
+}
+#nextslide {
+  right: 0;
+  margin-right: 13%;
+}
+.slidebutton a {
+  color: var(--primary);
+  text-align: center;
+  transform: translateY(3px);
+}
+.cubing:hover,
+.coding:hover,
+.balisong:hover,
+.yoyo:hover,
+.gaming:hover,
+.soccer:hover,
+.badminton:hover {
+  transform: translateX(20px);
+}
+
+/* 
+
+HOBBIES SECTION END*/
+/* SKILL SECTION
+
+
+*/
+.skillsec {
+  height: auto;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/softskill1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.skillsec .h11 {
+  font-size: 7rem;
+  color: white;
+  z-index: 9999;
+  margin-top: 20%;
+}
+.skillsec .h11 span {
+  font-style: italic;
+  color: var(--primary);
+}
+.skillsec::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    var(--bg3) 8%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  width: 100%;
+  height: 30%;
+  display: block;
+  top: 0;
+}
+.skillbox {
+  background-color: transparent;
+  margin-top: 2%;
+  width: 80%;
+}
+.row1 {
+  margin: 140px 0px;
+  color: white;
+  font-size: 2rem;
+  background-color: transparent;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.row1 p {
+  margin: 0px 110px;
+}
+.row1 .h1 {
+  display: flex;
+  text-align: center;
+  padding: 0px 30px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 40vw;
+  border-left: 6px solid var(--primary);
+}
+.row1 .h2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 0px 30px;
+  height: 200px;
+  background-color: transparent;
+  width: 40vw;
+  border-right: 6px solid var(--primary);
+}
+
+/* 
+
+
+SKILL SECTION END*/
+/* PROJECT SEC
+
+
+*/
+.projectsec {
+  height: auto;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/project1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.projectsec::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    var(--bg3) 8%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  width: 100%;
+  height: 30%;
+  display: block;
+  top: 0;
+}
+.projectsec .header {
+  margin-top: 25%;
+  font-size: 9rem;
+  color: var(--primary);
+
+  border-bottom: 5px solid var(--primary);
+}
+.projectsec .header span {
+  color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+}
+.projectbox {
+  background-color: transparent;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.projectrow {
+  background-color: transparent;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.projectitem {
+  width: 35vw;
+  height: 80%;
+  background-color: rgba(48, 48, 48, 0.822);
+  text-align: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectitem h1 {
+  font-size: 5rem;
+  background-color: transparent;
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+}
+
+.projectitem a {
+  font-size: 2rem;
+  margin-top: 5%;
+  width: 10vw;
+  color: var(--primary);
+  background-color: var(--bg);
+  border: 3px solid var(--primary);
+  padding: 5px 3px;
+  border-radius: 100px;
+  z-index: 11000;
+}
+.projectitem a:hover {
+  background-color: var(--primary);
+  transform: scale(1.05);
+  color: white;
+}
+
+/* 
+
+
+PROJECT SEC END*/
+/* HABITS SEC
+
+
+*/
+.habitsec {
+  height: auto;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/habits1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.habitsec h1 {
+  color: var(--primary);
+  font-size: 8rem;
+  z-index: 999;
+  text-align: center;
+  margin-top: 20%;
+}
+.habitsec h1 span {
+  color: transparent;
+  -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 3px;
+}
+.habitsec::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    var(--bg3) 8%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  width: 100%;
+  height: 30%;
+  display: block;
+  top: 0;
+}
+.habitbox {
+  background-color: rgba(51, 51, 51, 0.295);
+  border-radius: 15px;
+  margin-top: 5%;
+  border-right: 4px solid var(--primary);
+  border-left: 4px solid var(--primary);
+  height: auto;
+  min-height: 100vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15%;
+}
+.pro {
+  background-color: transparent;
+  border-radius: 15px;
+  width: 45%;
+  min-height: 50vh;
+  height: fit-content;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
+}
+.pro:hover,
+.cons:hover {
+  background-color: rgba(49, 49, 49, 0.452);
+}
+.pro h1 {
+  font-size: 5rem;
+  color: transparent;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(133, 240, 133);
+  height: 10%;
+  width: 50%;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(133, 240, 133);
+}
+.pro ul li {
+  font-size: 2.5rem;
+  color: white;
+  padding: 50px 0px;
+  list-style: none;
+}
+.pro ul li::before,
+.cons ul li::before {
+  content: "\2315";
+  color: white;
+  padding-right: 15px;
+}
+
+.cons {
+  background-color: transparent;
+  width: 45%;
+  border-radius: 15px;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 40px;
+}
+.cons h1 {
+  font-size: 5rem;
+  color: transparent;
+  background-color: transparent;
+  border-bottom: 3px solid rgb(230, 66, 66);
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(230, 66, 66);
+}
+.cons ul li {
+  font-size: 2.5rem;
+  color: white;
+  padding: 50px 0px;
+  list-style: none;
+}
+
+/* 
+
+
+HABITS SEC END*/
+/* FOOTER SEC
+
+
+*/
+footer {
+  height: 30vh;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bg3);
+  background-position-y: 10%;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-top: 2px solid var(--primary);
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 100vw;
+}
+footer .social a {
+  margin: 0px 100px;
+  background-color: transparent;
+  transform: scale(2);
+  color: var(--primary);
+}
+footer .social a:hover {
+  cursor: pointer;
+  transform: scale(2.2) rotate(10deg);
+}
+.copyright {
+  color: white;
+  font-size: 1rem;
+}
+.copyright span {
+  color: var(--primary);
+  -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 0.1px;
+}
+.home {
+  background-color: red;
+  padding: 0px 20px;
+  background-color: rgb(25, 25, 25);
+  margin: 30px 0px;
+  border-radius: 100px;
+  font-weight: 500;
+  color: white;
+  font-size: 1.5rem;
+  border: 3px solid var(--primary);
+}
+.home:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: black;
+  transform: scale(1.1);
+}
+.home:active {
+  transform: scale(1);
+}
+/* 
+
+
+FOOTER SEC END*/
+
+/*DEVICE
+
+
+*/
+/* LAPTOP */
+@media (max-width: 1766px) {
+  html {
+    font-size: 75%;
+  }
+  .nav {
+    height: 8vh;
+  }
+  .navcontent a {
+    margin: 0px 10px;
+    padding: 5px 15px;
+  }
+}
+/* TABLET */
+@media (max-width: 1168px) {
+  html {
+    font-size: 65%;
+  }
+  .logo {
+    font-size: 5rem;
+  }
+  .navcontent {
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    min-height: 91vh;
+    min-width: 30%;
+    background-color: rgb(34, 34, 34);
+    right: -100%;
+    margin-top: 100vh;
+    border-left: 3px solid white;
+    justify-content: space-evenly;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .navcontent.active {
+    right: 0%;
+    opacity: 1;
+  }
+  .navcontent a {
+    width: 15vh;
+    padding: 0px 15px;
+    text-align: center;
+    font-size: 3rem;
+    border-bottom: 4px solid var(--primary);
+    border-radius: 0px;
+  }
+  .navcontent a:hover {
+    width: 20vh;
+    background-color: rgb(34, 34, 34);
+  }
+  .hamburgermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: running navitem;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  .hamburgermenu span {
+    display: block;
+    width: 100%;
+    background-color: var(--primary);
+    height: 6px;
+    border-radius: 5px;
+    transition: all 0.2s;
+  }
+
+  .hamburgermenu input {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+  }
+  .hamburgermenu input:hover {
+    cursor: pointer;
+  }
+  .hamburgermenu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(5px, -8px);
+    transform-origin: 0 0;
+  }
+  .hamburgermenu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(2px, 7px);
+    transform-origin: 0 0;
+  }
+  .hamburgermenu input:checked ~ span:nth-child(3) {
+    opacity: 0;
+  }
+  .hamburgermenu input:hover ~ span {
+    background-color: white;
+    transform: scale(1.1);
+  }
+  .hamburgermenu input:active ~ span {
+    transform: scale(1);
+  }
+  .row1 p {
+    font-size: 1.5rem;
+  }
+  .row1 h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+}
+@media (max-height: 890px) {
+  body {
+    display: none;
+  }
+}
